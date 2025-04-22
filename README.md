@@ -1,29 +1,5 @@
 
 
-## 📁 Project Structure
-.
-├── data/
-│   ├── training/
-│   │   ├── glioma/
-│   │   ├── meningioma/
-│   │   ├── notumor/
-│   │   └── pituitary/
-│   └── testing/
-│       ├── glioma/
-│       ├── meningioma/
-│       ├── notumor/
-│       └── pituitary/
-├── notebooks/
-│   └── BrainTumourDetection.ipynb
-├── src/
-│   ├── data_loader.py
-│   ├── models.py
-│   └── utils.py
-├── requirements.txt
-└── README.md
-```
-
----
 
 ## 🛠️ Requirements
 
@@ -61,8 +37,8 @@ pip install -r requirements.txt
 | **1. Custom CNN**                   | 150             | ~70.2 %     | 0.7116     | 69.5 %    | 0.7504    | 2 Conv→Pool→BN layers, Flatten + Dense                |
 | **2. Enhanced CNN**                 | 50 + callbacks  | –           | –          | –         | –         | L₂ regularization, Dropout; test accuracy ~65 %¹      |
 | **3. Xception (frozen)**            | 30              | ~84.3 %     | ~0.52      | 74.7 %    | 0.6885    | ImageNet‑pretrained base; head = Pool→Dense→Softmax   |
-| **4. ResNet50 (frozen)**            | 30 + callbacks  | ~88.0 %     | ~0.31      | 87.0 %    | 0.30²     | ImageNet‑pretrained base with Dense head             |
-| **5. ResNet50/Xception (fine‑tuned)** | 20            | 99.82%      | 0.0058     | 97.19%    | 96.07     | Fine‑tuned last layers; Precision/Recall included ⁽³⁾ |
+| **4. ResNet50 (frozen)**            | 30 + callbacks  | ~88.0 %     | ~0.31      | 87.0 %    | 0.30²     | ImageNet‑pretrained base with Dense head     n        |
+| **5. ResNet50/Xception (fine‑tuned)** | 20            | 99.82%      | 0.0058     | 97.19%    | 0.0967    | Fine‑tuned last layers; Precision/Recall included ⁽³⁾ |
 
 ¹ Classification report weighted‑avg F1 ≈ 0.63  
 ² Weighted‑avg F1 ≈ 0.87  
